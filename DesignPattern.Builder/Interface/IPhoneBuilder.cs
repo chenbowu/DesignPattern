@@ -8,10 +8,10 @@ namespace DesignPattern.Builder.Interface
 {
     internal interface IPhoneBuilder
     {
-        IPhoneBuilder UseCpu();
-        IPhoneBuilder UseMainboard();
-        IPhoneBuilder UseMemory();
-        IPhoneBuilder UseScreen();
+        IPhoneBuilder SetCPU(ICPU cpu);
+        IPhoneBuilder SetMainboard(IMainboard mainboard);
+        IPhoneBuilder SetMemory(IMemory memory);
+        IPhoneBuilder SetScreen(IScreen screen);
         IPhone Builder();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Builder.Interface
 {
-    internal interface ICpu
+    internal interface ICPU
     {
         string Type { get; set; }
     }

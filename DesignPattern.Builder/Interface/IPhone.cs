@@ -9,7 +9,7 @@ namespace DesignPattern.Builder.Interface
     internal interface IPhone
     {
         IMainboard Mainboard { get; set; }
-        ICpu Cpu { get; set; }
+        ICPU CPU { get; set; }
         IMemory Memory { get; set; }
         IScreen Screen { get; set; }
         void Show();

@@ -10,30 +10,43 @@ namespace DesignPattern.Builder.Builder
     internal class PhoneBuilder : IPhoneBuilder
     {
         private IPhone _phone;
+        private ICPU _cpu;
+        private IMainboard _mainboard;
+        private IMemory _memory;
+        private IScreen _screen;
+
         public IPhone Builder()
         {
             _phone = new ApplePhone();
-            throw new NotImplementedException();
+            _phone.Mainboard = _mainboard;
+            _phone.CPU = _cpu;
+            _phone.Memory = _memory;
+            _phone.Screen = _screen;
+            return _phone;
         }
 
-        public IPhoneBuilder UseCpu()
+        public IPhoneBuilder SetCPU(ICPU cpu)
         {
-            throw new NotImplementedException();
+            _cpu = cpu;
+            return this;
         }
 
-        public IPhoneBuilder UseMainboard()
+        public IPhoneBuilder SetMainboard(IMainboard mainboard)
         {
-            throw new NotImplementedException();
+            _mainboard = mainboard;
+            return this;
         }
 
-        public IPhoneBuilder UseMemory()
+        public IPhoneBuilder SetMemory(IMemory memory)
         {
-            throw new NotImplementedException();
+            _memory = memory;
+            return this;
         }
 
-        public IPhoneBuilder UseScreen()
+        public IPhoneBuilder SetScreen(IScreen screen)
         {
-            throw new NotImplementedException();
+            _screen = screen;
+            return this;
         }
     }
 }
