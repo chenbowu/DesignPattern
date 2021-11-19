@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern.Builder
+namespace DesignPattern.Builder.Phones
 {
     internal class ApplePhone : IPhone
     {
